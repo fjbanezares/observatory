@@ -34,20 +34,20 @@ object Main extends App {
   val sqlContext = spark.sqlContext
 
   val customSchemaTemp = StructType(Array(
-    StructField("STN", StringType, true),
-    StructField("WBAN", StringType, true),
-    StructField("month", IntegerType, true),
-    StructField("day", IntegerType, true),
-    StructField("avgTemperature", DoubleType, true)))
+    StructField("STN", StringType, nullable = true),
+    StructField("WBAN", StringType, nullable = true),
+    StructField("month", IntegerType, nullable = true),
+    StructField("day", IntegerType, nullable = true),
+    StructField("avgTemperature", DoubleType, nullable = true)))
 
   val dfTemp = sqlContext.read.format("com.databricks.spark.csv").schema(customSchemaTemp).load("src/main/resources/1977.csv").na.fill("0",Seq("STN","WBAN"))
 
 
   val customSchemaStations = StructType(Array(
-    StructField("STN", StringType, true),
-    StructField("WBAN", StringType, true),
-    StructField("latitud", DoubleType, true),
-    StructField("longitud", DoubleType, true)))
+    StructField("STN", StringType, nullable = true),
+    StructField("WBAN", StringType, nullable = true),
+    StructField("latitud", DoubleType, nullable = true),
+    StructField("longitud", DoubleType, nullable = true)))
 
   val dfStations = sqlContext.read.format("com.databricks.spark.csv").schema(customSchemaStations).load("src/main/resources/stations.csv")
 
@@ -75,11 +75,14 @@ object Main extends App {
                         latitud: Double,
                         longitud: Double)
 
-  val ds = dfTemp.join(dfStationsFiltradaArreglada,Seq("STN","WBAN"),"leftOuter").as[Body]
+  val ds = dfTemp.join(dfStationsFiltradaArreglada,Seq("STN","WBAN"),"inner").as[Body].
+    rdd.map(x=>(LocalDate.of(year,x.month,x.day), Location(x.latitud,x.longitud),x.avgTemperature)).collect().toSeq.foreach(println)
 
-  ds.map(x=>(LocalDate.of(year,x.month,x.day),
-    Location(x.latitud,x.longitud),x.avgTemperature
-    ))(localDateEncoder).show(200)
+ // ds.map(x=>(LocalDate.of(year,x.month,x.day)))
+
+
+  /*  Location(x.latitud,x.longitud),x.avgTemperature
+    ))(localDateEncoder).show(200)*/
 
 
 
