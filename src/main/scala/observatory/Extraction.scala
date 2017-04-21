@@ -3,7 +3,10 @@ package observatory
 import java.time.LocalDate
 
 import org.apache.spark.rdd.RDD
-import org.apache.spark.sql.{Encoders, SQLContext, SparkSession}
+import java.io.File
+import java.nio.file.Paths
+
+import org.apache.spark.sql._
 import org.apache.spark.sql.types.{DoubleType, IntegerType, StringType, StructField, StructType}
 import org.apache.spark.sql.functions._
 import org.apache.spark.{SparkConf, SparkContext}
@@ -21,10 +24,53 @@ object  Extraction {
       .config("spark.master", "local")
       .getOrCreate()
 
+  val sc = spark.sparkContext
 
   import spark.implicits._
 
-  val sc: SparkContext = spark.sparkContext
+
+  def fsPath(resource: String): String = Paths.get(getClass.getResource(resource).toURI).toString
+  def rowTemp(line: List[String]): Row = Row(line(0), line(1), line(2).toInt, line(3).toInt, line(4).toDouble)
+  def rowStat(line: List[String]): Row = Row(line(0), line(1), line(2).toDouble, line(3).toDouble)
+
+  def readTemp(resource: String): DataFrame = {
+    val rdd = spark.sparkContext.textFile((resource))
+
+    // Compute the schema based on the first line of the CSV file
+    val customSchemaTemp = StructType(Array(
+      StructField("STN", StringType, true),
+      StructField("WBAN", StringType, true),
+      StructField("month", IntegerType, true),
+      StructField("day", IntegerType, true),
+      StructField("avgTemperature", DoubleType, true)))
+
+    val data = rdd.map(_.split(",").to[List]).filter(x=>x.size==5).map(rowTemp)
+
+    val dataFrame =
+      spark.createDataFrame(data, customSchemaTemp)
+
+    dataFrame
+  }
+
+  def readStat(resource: String): DataFrame = {
+    val rdd = spark.sparkContext.textFile((resource))
+
+    // Compute the schema based on the first line of the CSV file
+    val customSchemaStations = StructType(Array(
+      StructField("STN", StringType, true),
+      StructField("WBAN", StringType, true),
+      StructField("latitud", DoubleType, true),
+      StructField("longitud", DoubleType, true)))
+
+    val data = rdd.map(_.split(",").to[List]).filter(x=>x.size==4).map(rowStat)
+
+    val dataFrame =
+      spark.createDataFrame(data, customSchemaStations)
+
+    dataFrame
+  }
+
+
   final case class Body(STN: String,
                         WBAN: String,
                         month: Int,
@@ -48,30 +94,14 @@ object  Extraction {
     *
     */
   def locateTemperatures(year: Int, stationsFile: String, temperaturesFile: String): Iterable[(LocalDate, Location, Double)] = {
-    import spark.implicits._
 
-    val sqlContext = spark.sqlContext
+   val dfTemperature = readTemp(temperaturesFile).na.fill("0",Seq("STN","WBAN"))
+   val dfStations = readStat(stationsFile)
 
-    val customSchemaTemp = StructType(Array(
-      StructField("STN", StringType, true),
-      StructField("WBAN", StringType, true),
-      StructField("day", IntegerType, true),
-      StructField("month", IntegerType, true),
-      StructField("avgTemperature", DoubleType, true)))
-    val dfTemperature = sqlContext.read.format("com.databricks.spark.csv").schema(customSchemaTemp).load(temperaturesFile).na.fill("0",Seq("STN","WBAN"))
+   val dfStationsFiltrada =  dfStations.where(!(dfStations.col("latitud").isNull || dfStations.col("longitud").isNull))
+   val dfStationsFiltradaArreglada =  dfStations.where(!(dfStations.col("latitud").isNull || dfStations.col("longitud").isNull)).na.fill("0",Seq("STN","WBAN"))
 
-
-    val customSchemaStations = StructType(Array(
-      StructField("STN", StringType, true),
-      StructField("WBAN", StringType, true),
-      StructField("lat", DoubleType, true),
-      StructField("long", DoubleType, true)))
-    val dfStations = sqlContext.read.format("com.databricks.spark.csv").schema(customSchemaStations).load(stationsFile)
-
-    val dfStationsFiltrada =  dfStations.where(!(dfStations.col("lat").isNull || dfStations.col("long").isNull))
-    val dfStationsFiltradaArreglada =  dfStations.where(!(dfStations.col("lat").isNull || dfStations.col("long").isNull)).na.fill("0",Seq("STN","WBAN"))
-
-    implicit val localDateEncoder = Encoders.kryo[(LocalDate,Location,Double)]
+//    implicit val localDateEncoder = Encoders.kryo[(LocalDate,Location,Double)]
 
 
 
@@ -88,7 +118,7 @@ object  Extraction {
     * @param records A sequence containing triplets (date, location, temperature)
     * @return A sequence containing, for each location, the average temperature over the year.
     */
-  def locationYearlyAverageRecords(records: Iterable[(LocalDate, Location, Double)]): Iterable[(Location, Double)] = {
-    val rddIterable = sc.parallelize(records)
+  def locationYearlyAverageRecords(records: Iterable[(LocalDate, Location, Double)]): Iterable[(Location, Double)] =
+    records.map(x=> (x._2,x._3)).groupBy(x=>x._1).map(x=>(x._1,x._2.map(x => x._2))).map(x=>(x._1,x._2.sum/x._2.size))
 
 }
