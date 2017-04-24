@@ -2,14 +2,12 @@ package observatory
 
 import java.time.LocalDate
 
-import org.apache.spark.rdd.RDD
-import java.io.File
+import java.io.InputStream
 import java.nio.file.Paths
 
-import org.apache.spark.sql._
-import org.apache.spark.sql.types.{DoubleType, IntegerType, StringType, StructField, StructType}
-import org.apache.spark.sql.functions._
-import org.apache.spark.{SparkConf, SparkContext}
+
+
+import scala.collection.mutable.ListBuffer
 
 
 /**
@@ -17,58 +15,29 @@ import org.apache.spark.{SparkConf, SparkContext}
   */
 object  Extraction {
 
-  val spark: SparkSession =
-    SparkSession
-      .builder()
-      .appName("Time Usage")
-      .config("spark.master", "local")
-      .getOrCreate()
-
-  val sc = spark.sparkContext
-
-  import spark.implicits._
+  def fsPath(resource: String): String =
+    Paths.get(getClass.getResource(resource).toURI).toString
 
 
-  def fsPath(resource: String): String = Paths.get(getClass.getResource(resource).toURI).toString
-  def rowTemp(line: List[String]): Row = Row(line(0), line(1), line(2).toInt, line(3).toInt, line(4).toDouble)
-  def rowStat(line: List[String]): Row = Row(line(0), line(1), line(2).toDouble, line(3).toDouble)
 
-  def readTemp(resource: String): DataFrame = {
-    val rdd = spark.sparkContext.textFile((resource))
 
-    // Compute the schema based on the first line of the CSV file
-    val customSchemaTemp = StructType(Array(
-      StructField("STN", StringType, true),
-      StructField("WBAN", StringType, true),
-      StructField("month", IntegerType, true),
-      StructField("day", IntegerType, true),
-      StructField("avgTemperature", DoubleType, true)))
+  type STNWBAN =  (String,String)
 
-    val data = rdd.map(_.split(",").to[List]).filter(x=>x.size==5).map(rowTemp)
+  type coordenadas = (Double,Double)
 
-    val dataFrame =
-      spark.createDataFrame(data, customSchemaTemp)
+  //(LocalDate.of(2015, 8, 11), Location(37.35, -78.433), 27.3),
+  // var listaResultante: List[LocalDate, Location]
 
-    dataFrame
-  }
 
-  def readStat(resource: String): DataFrame = {
-    val rdd = spark.sparkContext.textFile((resource))
 
-    // Compute the schema based on the first line of the CSV file
-    val customSchemaStations = StructType(Array(
-      StructField("STN", StringType, true),
-      StructField("WBAN", StringType, true),
-      StructField("latitud", DoubleType, true),
-      StructField("longitud", DoubleType, true)))
 
-    val data = rdd.map(_.split(",").to[List]).filter(x=>x.size==4).map(rowStat)
 
-    val dataFrame =
-      spark.createDataFrame(data, customSchemaStations)
 
-    dataFrame
-  }
+
+
+
+  def farenheitToCelsios(temperature: Double):Double = ((temperature - 32) * 5 / 9)
+
 
 
   final case class Body(STN: String,
@@ -95,22 +64,35 @@ object  Extraction {
     */
   def locateTemperatures(year: Int, stationsFile: String, temperaturesFile: String): Iterable[(LocalDate, Location, Double)] = {
 
-   val dfTemperature = readTemp(temperaturesFile).na.fill("0",Seq("STN","WBAN"))
-   val dfStations = readStat(stationsFile)
+    //creo mapa de estaciones en memoria
+    var mapita = scala.collection.mutable.Map[STNWBAN, coordenadas]()
+    val is: InputStream = getClass.getResourceAsStream(stationsFile)
+    val lines: Iterator[String] = scala.io.Source.fromInputStream(is).getLines()
+    while (lines.hasNext) {
 
-   val dfStationsFiltrada =  dfStations.where(!(dfStations.col("latitud").isNull || dfStations.col("longitud").isNull))
-   val dfStationsFiltradaArreglada =  dfStations.where(!(dfStations.col("latitud").isNull || dfStations.col("longitud").isNull)).na.fill("0",Seq("STN","WBAN"))
+      val linea = lines.next()
+      val trozos: List[String] = linea.split(",").toList
+      if (trozos.size == 4) mapita((trozos(0), trozos(1))) = (trozos(2).toDouble, trozos(3).toDouble)
+    }
 
-//    implicit val localDateEncoder = Encoders.kryo[(LocalDate,Location,Double)]
+    val is2: InputStream = getClass.getResourceAsStream(temperaturesFile)
+    val lines2: Iterator[String] = scala.io.Source.fromInputStream(is2).getLines()
 
+    var fruits = new ListBuffer[(LocalDate, Location, Double)]()
 
+    while (lines2.hasNext) {
 
+      val linea2 = lines2.next()
+      val trozos2: List[String] = linea2.split(",").toList
+      if (trozos2.size == 5 && mapita.contains((trozos2(0), trozos2(1)))) {
+        val location: coordenadas = mapita((trozos2(0), trozos2(1)))
+        val pepito = (LocalDate.of(year, trozos2(2).toInt, trozos2(3).toInt), Location(location._1, location._2), farenheitToCelsios(trozos2(4).toDouble))
+        fruits += pepito
+      }
 
-
-    dfTemperature.join(dfStationsFiltradaArreglada,Seq("STN","WBAN"),"inner").as[Body].
-      rdd.map(x=>(LocalDate.of(year,x.month,x.day), Location(x.latitud,x.longitud),x.avgTemperature)).collect().toSeq
-
-    //
+      //
+    }
+    fruits
   }
 
 
@@ -119,6 +101,6 @@ object  Extraction {
     * @return A sequence containing, for each location, the average temperature over the year.
     */
   def locationYearlyAverageRecords(records: Iterable[(LocalDate, Location, Double)]): Iterable[(Location, Double)] =
-    records.map(x=> (x._2,x._3)).groupBy(x=>x._1).map(x=>(x._1,x._2.map(x => x._2))).map(x=>(x._1,x._2.sum/x._2.size))
+    records.map(x=> (x._2,x._3)).groupBy(x=>x._1).map(x=>(x._1,x._2.map(x => x._2))).map(x=>(x._1,x._2.sum/x._2.size)).toSeq
 
 }

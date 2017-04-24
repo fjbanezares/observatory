@@ -1,10 +1,81 @@
-[info] Updating {file:/home/fjbanez/Desktop/cursoSparkOderski/final/observatory/project/}observatory-build...
+[info] Updating {file:/C:/Users/Pedro/Downloads/CURSO%20SCALA%20ENERO%202017/practicafinal/observatory/project/}observatory-build...
 [debug] :: resolving dependencies :: default#observatory-build;0.1-SNAPSHOT
 [debug] 	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool]
 [debug] 	validate = true
 [debug] 	refresh = false
 [debug] resolving dependencies for configuration 'compile'
 [debug] == resolving dependencies for default#observatory-build;0.1-SNAPSHOT [compile]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->default(compile)]
+[info] Resolving org.scalastyle#scalastyle_2.10;0.8.0 ...
+[debug] sbt-chain: Checking cache for: dependency: org.scalastyle#scalastyle_2.10;0.8.0 {compile=[default(compile)]}
+[debug] sbt-chain: module revision found in cache: org.scalastyle#scalastyle_2.10;0.8.0
+[debug] 	found org.scalastyle#scalastyle_2.10;0.8.0 in sbt-chain
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->runtime]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->compile]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->master(compile)]
+[info] Resolving org.scala-lang#scala-library;2.10.5 ...
+[debug] sbt-chain: Checking cache for: dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
+[debug] sbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.5
+[debug] 	found org.scala-lang#scala-library;2.10.5 in sbt-chain
+[debug] 	[2.10.5] org.scala-lang#scala-library;2.10.5
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->compile(*)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->runtime(*)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->compile]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->master(compile)]
+[info] Resolving org.scalariform#scalariform_2.10;0.1.7 ...
+[debug] sbt-chain: Checking cache for: dependency: org.scalariform#scalariform_2.10;0.1.7 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
+[debug] sbt-chain: module revision found in cache: org.scalariform#scalariform_2.10;0.1.7
+[debug] 	found org.scalariform#scalariform_2.10;0.1.7 in sbt-chain
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->compile(*)]
+[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [compile->master(compile)]
+[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [compile->compile(*)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->runtime(*)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->compile]
+[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)]
+[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->compile]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->master(compile)]
+[info] Resolving com.typesafe#config;1.2.0 ...
+[debug] sbt-chain: Checking cache for: dependency: com.typesafe#config;1.2.0 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
+[debug] sbt-chain: module revision found in cache: com.typesafe#config;1.2.0
+[debug] 	found com.typesafe#config;1.2.0 in sbt-chain
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->compile(*)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->runtime(*)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->compile]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [runtime->compile]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [runtime->runtime(*)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [runtime->compile]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [runtime->runtime(*)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [runtime->compile]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->master]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->default(compile)]
+[info] Resolving org.scalaj#scalaj-http_2.10;2.2.1 ...
+[debug] sbt-chain: Checking cache for: dependency: org.scalaj#scalaj-http_2.10;2.2.1 {compile=[default(compile)]}
+[debug] sbt-chain: module revision found in cache: org.scalaj#scalaj-http_2.10;2.2.1
+[debug] 	found org.scalaj#scalaj-http_2.10;2.2.1 in sbt-chain
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->runtime]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->compile]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [compile->master(compile)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [compile->compile(*)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [runtime->compile]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->master]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->default(compile)]
+[info] Resolving commons-codec#commons-codec;1.10 ...
+[debug] sbt-chain: Checking cache for: dependency: commons-codec#commons-codec;1.10 {compile=[default(compile)]}
+[debug] sbt-chain: module revision found in cache: commons-codec#commons-codec;1.10
+[debug] 	found commons-codec#commons-codec;1.10 in sbt-chain
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->runtime]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->compile]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->master]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->default(compile)]
+[info] Resolving org.apache.commons#commons-lang3;3.4 ...
+[debug] sbt-chain: Checking cache for: dependency: org.apache.commons#commons-lang3;3.4 {compile=[default(compile)]}
+[debug] sbt-chain: module revision found in cache: org.apache.commons#commons-lang3;3.4
+[debug] 	found org.apache.commons#commons-lang3;3.4 in sbt-chain
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->runtime]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->compile]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->master]
 [debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->com.typesafe.sbteclipse#sbteclipse-plugin;5.1.0 [compile->default(compile)]
 [info] Resolving com.typesafe.sbteclipse#sbteclipse-plugin;5.1.0 ...
 [debug] sbt-chain: Checking cache for: dependency: com.typesafe.sbteclipse#sbteclipse-plugin;5.1.0 {compile=[default(compile)]}
@@ -29,14 +100,7 @@
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.5 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.5 {provided=[default(compile)]}
-[info] Resolving org.scala-lang#scala-library;2.10.5 ...
-[debug] sbt-chain: Checking cache for: dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] sbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.5
-[debug] 	found org.scala-lang#scala-library;2.10.5 in sbt-chain
-[debug] 	[2.10.5] org.scala-lang#scala-library;2.10.5
 [debug] == resolving dependencies org.scalaz#scalaz-core_2.10;7.2.5->org.scala-lang#scala-library;2.10.5 [compile->compile(*)]
-[debug] == resolving dependencies org.scalaz#scalaz-core_2.10;7.2.5->org.scala-lang#scala-library;2.10.5 [compile->runtime(*)]
-[debug] == resolving dependencies org.scalaz#scalaz-core_2.10;7.2.5->org.scala-lang#scala-library;2.10.5 [compile->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [debug] == resolving dependencies org.scalaz#scalaz-core_2.10;7.2.5->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)]
 [debug] == resolving dependencies org.scalaz#scalaz-core_2.10;7.2.5->org.scala-lang#scala-library;2.10.5 [runtime->compile]
@@ -924,47 +988,30 @@
 [debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->io.get-coursier#sbt-coursier;1.0.0-M15 [compile->master]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {provided=[compile(*), provided(*), runtime(*), master(compile)]} => dependency: org.scala-lang#scala-library;2.10.5 {provided=[compile(*), provided(*), runtime(*), master(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {provided=[compile(*), provided(*), runtime(*), master(compile)]} => dependency: org.scala-lang#scala-library;2.10.5 {provided=[compile(*), provided(*), runtime(*), master(compile)]}
+[debug] resolving dependencies for configuration 'runtime'
+[debug] == resolving dependencies for default#observatory-build;0.1-SNAPSHOT [runtime]
+[debug] == resolving dependencies for default#observatory-build;0.1-SNAPSHOT [compile]
 [debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->default(compile)]
-[info] Resolving org.scalastyle#scalastyle_2.10;0.8.0 ...
-[debug] sbt-chain: Checking cache for: dependency: org.scalastyle#scalastyle_2.10;0.8.0 {compile=[default(compile)]}
-[debug] sbt-chain: module revision found in cache: org.scalastyle#scalastyle_2.10;0.8.0
-[debug] 	found org.scalastyle#scalastyle_2.10;0.8.0 in sbt-chain
 [debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->runtime]
 [debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->compile]
 [debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->master(compile)]
 [debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->compile(*)]
 [debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->master(compile)]
-[info] Resolving org.scalariform#scalariform_2.10;0.1.7 ...
-[debug] sbt-chain: Checking cache for: dependency: org.scalariform#scalariform_2.10;0.1.7 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] sbt-chain: module revision found in cache: org.scalariform#scalariform_2.10;0.1.7
-[debug] 	found org.scalariform#scalariform_2.10;0.1.7 in sbt-chain
 [debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->compile(*)]
 [debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [compile->master(compile)]
 [debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [compile->compile(*)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->runtime(*)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->compile]
-[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)]
-[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->compile]
 [debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->master(compile)]
-[info] Resolving com.typesafe#config;1.2.0 ...
-[debug] sbt-chain: Checking cache for: dependency: com.typesafe#config;1.2.0 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] sbt-chain: module revision found in cache: com.typesafe#config;1.2.0
-[debug] 	found com.typesafe#config;1.2.0 in sbt-chain
 [debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->compile(*)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->runtime(*)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->compile]
 [debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)]
 [debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [runtime->compile]
 [debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [runtime->runtime(*)]
 [debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [runtime->compile]
+[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)]
+[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->compile]
 [debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [runtime->runtime(*)]
 [debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [runtime->compile]
 [debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->master]
 [debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->default(compile)]
-[info] Resolving org.scalaj#scalaj-http_2.10;2.2.1 ...
-[debug] sbt-chain: Checking cache for: dependency: org.scalaj#scalaj-http_2.10;2.2.1 {compile=[default(compile)]}
-[debug] sbt-chain: module revision found in cache: org.scalaj#scalaj-http_2.10;2.2.1
-[debug] 	found org.scalaj#scalaj-http_2.10;2.2.1 in sbt-chain
 [debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->runtime]
 [debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->compile]
 [debug] == resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [compile->master(compile)]
@@ -973,24 +1020,13 @@
 [debug] == resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [runtime->compile]
 [debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->master]
 [debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->default(compile)]
-[info] Resolving commons-codec#commons-codec;1.10 ...
-[debug] sbt-chain: Checking cache for: dependency: commons-codec#commons-codec;1.10 {compile=[default(compile)]}
-[debug] sbt-chain: module revision found in cache: commons-codec#commons-codec;1.10
-[debug] 	found commons-codec#commons-codec;1.10 in sbt-chain
 [debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->runtime]
 [debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->compile]
 [debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->master]
 [debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->default(compile)]
-[info] Resolving org.apache.commons#commons-lang3;3.4 ...
-[debug] sbt-chain: Checking cache for: dependency: org.apache.commons#commons-lang3;3.4 {compile=[default(compile)]}
-[debug] sbt-chain: module revision found in cache: org.apache.commons#commons-lang3;3.4
-[debug] 	found org.apache.commons#commons-lang3;3.4 in sbt-chain
 [debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->runtime]
 [debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->compile]
 [debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->master]
-[debug] resolving dependencies for configuration 'runtime'
-[debug] == resolving dependencies for default#observatory-build;0.1-SNAPSHOT [runtime]
-[debug] == resolving dependencies for default#observatory-build;0.1-SNAPSHOT [compile]
 [debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->com.typesafe.sbteclipse#sbteclipse-plugin;5.1.0 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.5 {provided=[default(compile)]}
 [debug] == resolving dependencies com.typesafe.sbteclipse#sbteclipse-plugin;5.1.0->org.scalaz#scalaz-core_2.10;7.2.5 [compile->default(compile)]
@@ -1738,46 +1774,46 @@
 [debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->io.get-coursier#sbt-coursier;1.0.0-M15 [compile->master]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {provided=[compile(*), provided(*), runtime(*), master(compile)]} => dependency: org.scala-lang#scala-library;2.10.5 {provided=[compile(*), provided(*), runtime(*), master(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {provided=[compile(*), provided(*), runtime(*), master(compile)]} => dependency: org.scala-lang#scala-library;2.10.5 {provided=[compile(*), provided(*), runtime(*), master(compile)]}
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->default(compile)]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->runtime]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->compile]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->master(compile)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->compile(*)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->master(compile)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->compile(*)]
-[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [compile->master(compile)]
-[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [compile->compile(*)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->master(compile)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->compile(*)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [runtime->compile]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [runtime->runtime(*)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [runtime->compile]
-[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)]
-[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->compile]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [runtime->runtime(*)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [runtime->compile]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->master]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->default(compile)]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->runtime]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->compile]
-[debug] == resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [compile->master(compile)]
-[debug] == resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [compile->compile(*)]
-[debug] == resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)]
-[debug] == resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [runtime->compile]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->master]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->default(compile)]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->runtime]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->compile]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->master]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->default(compile)]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->runtime]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->compile]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->master]
 [debug] resolving dependencies for configuration 'test'
 [debug] == resolving dependencies for default#observatory-build;0.1-SNAPSHOT [test]
 [debug] == resolving dependencies for default#observatory-build;0.1-SNAPSHOT [runtime]
 [debug] == resolving dependencies for default#observatory-build;0.1-SNAPSHOT [compile]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->default(compile)]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->runtime]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->compile]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->master(compile)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->compile(*)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->master(compile)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->compile(*)]
+[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [compile->master(compile)]
+[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [compile->compile(*)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->master(compile)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->compile(*)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [runtime->compile]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [runtime->runtime(*)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [runtime->compile]
+[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)]
+[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->compile]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [runtime->runtime(*)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [runtime->compile]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->master]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->default(compile)]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->runtime]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->compile]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [compile->master(compile)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [compile->compile(*)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [runtime->compile]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->master]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->default(compile)]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->runtime]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->compile]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->master]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->default(compile)]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->runtime]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->compile]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->master]
 [debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->com.typesafe.sbteclipse#sbteclipse-plugin;5.1.0 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.5 {provided=[default(compile)]}
 [debug] == resolving dependencies com.typesafe.sbteclipse#sbteclipse-plugin;5.1.0->org.scalaz#scalaz-core_2.10;7.2.5 [compile->default(compile)]
@@ -2525,42 +2561,6 @@
 [debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->io.get-coursier#sbt-coursier;1.0.0-M15 [compile->master]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {provided=[compile(*), provided(*), runtime(*), master(compile)]} => dependency: org.scala-lang#scala-library;2.10.5 {provided=[compile(*), provided(*), runtime(*), master(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {provided=[compile(*), provided(*), runtime(*), master(compile)]} => dependency: org.scala-lang#scala-library;2.10.5 {provided=[compile(*), provided(*), runtime(*), master(compile)]}
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->default(compile)]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->runtime]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->compile]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->master(compile)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->compile(*)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->master(compile)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->compile(*)]
-[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [compile->master(compile)]
-[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [compile->compile(*)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->master(compile)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->compile(*)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [runtime->compile]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [runtime->runtime(*)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [runtime->compile]
-[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)]
-[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->compile]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [runtime->runtime(*)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [runtime->compile]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->master]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->default(compile)]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->runtime]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->compile]
-[debug] == resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [compile->master(compile)]
-[debug] == resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [compile->compile(*)]
-[debug] == resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)]
-[debug] == resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [runtime->compile]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->master]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->default(compile)]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->runtime]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->compile]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->master]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->default(compile)]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->runtime]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->compile]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->master]
 [debug] resolving dependencies for configuration 'provided'
 [debug] == resolving dependencies for default#observatory-build;0.1-SNAPSHOT [provided]
 [debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [provided->default(compile)]
@@ -3420,6 +3420,42 @@
 [debug] resolving dependencies for configuration 'compile-internal'
 [debug] == resolving dependencies for default#observatory-build;0.1-SNAPSHOT [compile-internal]
 [debug] == resolving dependencies for default#observatory-build;0.1-SNAPSHOT [compile]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->default(compile)]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->runtime]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->compile]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->master(compile)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->compile(*)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->master(compile)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->compile(*)]
+[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [compile->master(compile)]
+[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [compile->compile(*)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->master(compile)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->compile(*)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [runtime->compile]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [runtime->runtime(*)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [runtime->compile]
+[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)]
+[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->compile]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [runtime->runtime(*)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [runtime->compile]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->master]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->default(compile)]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->runtime]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->compile]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [compile->master(compile)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [compile->compile(*)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [runtime->compile]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->master]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->default(compile)]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->runtime]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->compile]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->master]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->default(compile)]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->runtime]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->compile]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->master]
 [debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->com.typesafe.sbteclipse#sbteclipse-plugin;5.1.0 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.5 {provided=[default(compile)]}
 [debug] == resolving dependencies com.typesafe.sbteclipse#sbteclipse-plugin;5.1.0->org.scalaz#scalaz-core_2.10;7.2.5 [compile->default(compile)]
@@ -4167,42 +4203,6 @@
 [debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->io.get-coursier#sbt-coursier;1.0.0-M15 [compile->master]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {provided=[compile(*), provided(*), runtime(*), master(compile)]} => dependency: org.scala-lang#scala-library;2.10.5 {provided=[compile(*), provided(*), runtime(*), master(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {provided=[compile(*), provided(*), runtime(*), master(compile)]} => dependency: org.scala-lang#scala-library;2.10.5 {provided=[compile(*), provided(*), runtime(*), master(compile)]}
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->default(compile)]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->runtime]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->compile]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->master(compile)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->compile(*)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->master(compile)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->compile(*)]
-[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [compile->master(compile)]
-[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [compile->compile(*)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->master(compile)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->compile(*)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [runtime->compile]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [runtime->runtime(*)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [runtime->compile]
-[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)]
-[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->compile]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [runtime->runtime(*)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [runtime->compile]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->master]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->default(compile)]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->runtime]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->compile]
-[debug] == resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [compile->master(compile)]
-[debug] == resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [compile->compile(*)]
-[debug] == resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)]
-[debug] == resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [runtime->compile]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->master]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->default(compile)]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->runtime]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->compile]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->master]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->default(compile)]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->runtime]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->compile]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->master]
 [debug] == resolving dependencies for default#observatory-build;0.1-SNAPSHOT [optional]
 [debug] == resolving dependencies for default#observatory-build;0.1-SNAPSHOT [provided]
 [debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [provided->default(compile)]
@@ -4812,6 +4812,42 @@
 [debug] == resolving dependencies for default#observatory-build;0.1-SNAPSHOT [runtime-internal]
 [debug] == resolving dependencies for default#observatory-build;0.1-SNAPSHOT [runtime]
 [debug] == resolving dependencies for default#observatory-build;0.1-SNAPSHOT [compile]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->default(compile)]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->runtime]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->compile]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->master(compile)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->compile(*)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->master(compile)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->compile(*)]
+[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [compile->master(compile)]
+[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [compile->compile(*)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->master(compile)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->compile(*)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [runtime->compile]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [runtime->runtime(*)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [runtime->compile]
+[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)]
+[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->compile]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [runtime->runtime(*)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [runtime->compile]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->master]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->default(compile)]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->runtime]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->compile]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [compile->master(compile)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [compile->compile(*)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [runtime->compile]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->master]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->default(compile)]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->runtime]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->compile]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->master]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->default(compile)]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->runtime]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->compile]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->master]
 [debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->com.typesafe.sbteclipse#sbteclipse-plugin;5.1.0 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.5 {provided=[default(compile)]}
 [debug] == resolving dependencies com.typesafe.sbteclipse#sbteclipse-plugin;5.1.0->org.scalaz#scalaz-core_2.10;7.2.5 [compile->default(compile)]
@@ -5559,48 +5595,48 @@
 [debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->io.get-coursier#sbt-coursier;1.0.0-M15 [compile->master]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {provided=[compile(*), provided(*), runtime(*), master(compile)]} => dependency: org.scala-lang#scala-library;2.10.5 {provided=[compile(*), provided(*), runtime(*), master(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {provided=[compile(*), provided(*), runtime(*), master(compile)]} => dependency: org.scala-lang#scala-library;2.10.5 {provided=[compile(*), provided(*), runtime(*), master(compile)]}
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->default(compile)]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->runtime]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->compile]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->master(compile)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->compile(*)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->master(compile)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->compile(*)]
-[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [compile->master(compile)]
-[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [compile->compile(*)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->master(compile)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->compile(*)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [runtime->compile]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [runtime->runtime(*)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [runtime->compile]
-[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)]
-[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->compile]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [runtime->runtime(*)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [runtime->compile]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->master]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->default(compile)]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->runtime]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->compile]
-[debug] == resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [compile->master(compile)]
-[debug] == resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [compile->compile(*)]
-[debug] == resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)]
-[debug] == resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [runtime->compile]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->master]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->default(compile)]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->runtime]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->compile]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->master]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->default(compile)]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->runtime]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->compile]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->master]
 [debug] == resolving dependencies for default#observatory-build;0.1-SNAPSHOT [optional]
 [debug] resolving dependencies for configuration 'test-internal'
 [debug] == resolving dependencies for default#observatory-build;0.1-SNAPSHOT [test-internal]
 [debug] == resolving dependencies for default#observatory-build;0.1-SNAPSHOT [test]
 [debug] == resolving dependencies for default#observatory-build;0.1-SNAPSHOT [runtime]
 [debug] == resolving dependencies for default#observatory-build;0.1-SNAPSHOT [compile]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->default(compile)]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->runtime]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->compile]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->master(compile)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->compile(*)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->master(compile)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->compile(*)]
+[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [compile->master(compile)]
+[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [compile->compile(*)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->master(compile)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->compile(*)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [runtime->compile]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [runtime->runtime(*)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [runtime->compile]
+[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)]
+[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->compile]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [runtime->runtime(*)]
+[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [runtime->compile]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->master]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->default(compile)]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->runtime]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->compile]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [compile->master(compile)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [compile->compile(*)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [runtime->compile]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->master]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->default(compile)]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->runtime]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->compile]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->master]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->default(compile)]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->runtime]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->compile]
+[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->master]
 [debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->com.typesafe.sbteclipse#sbteclipse-plugin;5.1.0 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.5 {provided=[default(compile)]}
 [debug] == resolving dependencies com.typesafe.sbteclipse#sbteclipse-plugin;5.1.0->org.scalaz#scalaz-core_2.10;7.2.5 [compile->default(compile)]
@@ -6348,42 +6384,6 @@
 [debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->io.get-coursier#sbt-coursier;1.0.0-M15 [compile->master]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {provided=[compile(*), provided(*), runtime(*), master(compile)]} => dependency: org.scala-lang#scala-library;2.10.5 {provided=[compile(*), provided(*), runtime(*), master(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {provided=[compile(*), provided(*), runtime(*), master(compile)]} => dependency: org.scala-lang#scala-library;2.10.5 {provided=[compile(*), provided(*), runtime(*), master(compile)]}
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->default(compile)]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->runtime]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->compile]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->master(compile)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [compile->compile(*)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->master(compile)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [compile->compile(*)]
-[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [compile->master(compile)]
-[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [compile->compile(*)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->master(compile)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [compile->compile(*)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scala-lang#scala-library;2.10.5 [runtime->compile]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [runtime->runtime(*)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->org.scalariform#scalariform_2.10;0.1.7 [runtime->compile]
-[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)]
-[debug] == resolving dependencies org.scalariform#scalariform_2.10;0.1.7->org.scala-lang#scala-library;2.10.5 [runtime->compile]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [runtime->runtime(*)]
-[debug] == resolving dependencies org.scalastyle#scalastyle_2.10;0.8.0->com.typesafe#config;1.2.0 [runtime->compile]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalastyle#scalastyle_2.10;0.8.0 [compile->master]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->default(compile)]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->runtime]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->compile]
-[debug] == resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [compile->master(compile)]
-[debug] == resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [compile->compile(*)]
-[debug] == resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)]
-[debug] == resolving dependencies org.scalaj#scalaj-http_2.10;2.2.1->org.scala-lang#scala-library;2.10.5 [runtime->compile]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scalaj#scalaj-http_2.10;2.2.1 [compile->master]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->default(compile)]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->runtime]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->compile]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->commons-codec#commons-codec;1.10 [compile->master]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->default(compile)]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->runtime]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->compile]
-[debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.apache.commons#commons-lang3;3.4 [compile->master]
 [debug] == resolving dependencies for default#observatory-build;0.1-SNAPSHOT [optional]
 [debug] == resolving dependencies for default#observatory-build;0.1-SNAPSHOT [provided]
 [debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [provided->default(compile)]
@@ -7040,14 +7040,16 @@
 [debug] == resolving dependencies default#observatory-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [scala-tool->optional(default)]
 [debug] 	resolved ivy file produced in cache
 [debug] :: downloading artifacts ::
-[debug] 	[NOT REQUIRED] com.typesafe.sbteclipse#sbteclipse-plugin;5.1.0!sbteclipse-plugin.jar
-[debug] 	[NOT REQUIRED] org.scala-js#sbt-scalajs;0.6.11!sbt-scalajs.jar
-[debug] 	[NOT REQUIRED] io.get-coursier#sbt-coursier;1.0.0-M15!sbt-coursier.jar
 [debug] 	[NOT REQUIRED] org.scalastyle#scalastyle_2.10;0.8.0!scalastyle_2.10.jar
 [debug] 	[NOT REQUIRED] org.scalaj#scalaj-http_2.10;2.2.1!scalaj-http_2.10.jar
 [debug] 	[NOT REQUIRED] commons-codec#commons-codec;1.10!commons-codec.jar
 [debug] 	[NOT REQUIRED] org.apache.commons#commons-lang3;3.4!commons-lang3.jar
+[debug] 	[NOT REQUIRED] com.typesafe.sbteclipse#sbteclipse-plugin;5.1.0!sbteclipse-plugin.jar
+[debug] 	[NOT REQUIRED] org.scala-js#sbt-scalajs;0.6.11!sbt-scalajs.jar
+[debug] 	[NOT REQUIRED] io.get-coursier#sbt-coursier;1.0.0-M15!sbt-coursier.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.10.5!scala-library.jar
+[debug] 	[NOT REQUIRED] org.scalariform#scalariform_2.10;0.1.7!scalariform_2.10.jar
+[debug] 	[NOT REQUIRED] com.typesafe#config;1.2.0!config.jar(bundle)
 [debug] 	[NOT REQUIRED] org.scala-js#scalajs-tools_2.10;0.6.11!scalajs-tools_2.10.jar
 [debug] 	[NOT REQUIRED] org.scala-js#scalajs-js-envs_2.10;0.6.11!scalajs-js-envs_2.10.jar
 [debug] 	[NOT REQUIRED] org.scala-js#scalajs-sbt-test-adapter_2.10;0.6.11!scalajs-sbt-test-adapter_2.10.jar
@@ -7074,8 +7076,6 @@
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.10.5!scala-reflect.jar
 [debug] 	[NOT REQUIRED] org.scalaz#scalaz-concurrent_2.10;7.2.7!scalaz-concurrent_2.10.jar(bundle)
 [debug] 	[NOT REQUIRED] org.scalaz#scalaz-effect_2.10;7.2.7!scalaz-effect_2.10.jar(bundle)
-[debug] 	[NOT REQUIRED] org.scalariform#scalariform_2.10;0.1.7!scalariform_2.10.jar
-[debug] 	[NOT REQUIRED] com.typesafe#config;1.2.0!config.jar(bundle)
 [debug] 	[NOT REQUIRED] org.scala-sbt#sbt;0.13.9!sbt.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#main;0.13.9!main.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#compiler-interface;0.13.9!compiler-interface-src.jar
@@ -7129,19 +7129,19 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.9!apply-macro.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#jline;2.10.5!jline.jar
 [debug] 	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar
-[debug] :: resolution report :: resolve 3887ms :: artifacts dl 159ms
-[debug] 	report for default#observatory-build;0.1-SNAPSHOT compile produced in /home/fjbanez/Desktop/cursoSparkOderski/final/observatory/project/target/resolution-cache/reports/default-observatory-build-compile.xml
-[debug] 	report for default#observatory-build;0.1-SNAPSHOT runtime produced in /home/fjbanez/Desktop/cursoSparkOderski/final/observatory/project/target/resolution-cache/reports/default-observatory-build-runtime.xml
-[debug] 	report for default#observatory-build;0.1-SNAPSHOT test produced in /home/fjbanez/Desktop/cursoSparkOderski/final/observatory/project/target/resolution-cache/reports/default-observatory-build-test.xml
-[debug] 	report for default#observatory-build;0.1-SNAPSHOT provided produced in /home/fjbanez/Desktop/cursoSparkOderski/final/observatory/project/target/resolution-cache/reports/default-observatory-build-provided.xml
-[debug] 	report for default#observatory-build;0.1-SNAPSHOT optional produced in /home/fjbanez/Desktop/cursoSparkOderski/final/observatory/project/target/resolution-cache/reports/default-observatory-build-optional.xml
-[debug] 	report for default#observatory-build;0.1-SNAPSHOT compile-internal produced in /home/fjbanez/Desktop/cursoSparkOderski/final/observatory/project/target/resolution-cache/reports/default-observatory-build-compile-internal.xml
-[debug] 	report for default#observatory-build;0.1-SNAPSHOT runtime-internal produced in /home/fjbanez/Desktop/cursoSparkOderski/final/observatory/project/target/resolution-cache/reports/default-observatory-build-runtime-internal.xml
-[debug] 	report for default#observatory-build;0.1-SNAPSHOT test-internal produced in /home/fjbanez/Desktop/cursoSparkOderski/final/observatory/project/target/resolution-cache/reports/default-observatory-build-test-internal.xml
-[debug] 	report for default#observatory-build;0.1-SNAPSHOT plugin produced in /home/fjbanez/Desktop/cursoSparkOderski/final/observatory/project/target/resolution-cache/reports/default-observatory-build-plugin.xml
-[debug] 	report for default#observatory-build;0.1-SNAPSHOT sources produced in /home/fjbanez/Desktop/cursoSparkOderski/final/observatory/project/target/resolution-cache/reports/default-observatory-build-sources.xml
-[debug] 	report for default#observatory-build;0.1-SNAPSHOT docs produced in /home/fjbanez/Desktop/cursoSparkOderski/final/observatory/project/target/resolution-cache/reports/default-observatory-build-docs.xml
-[debug] 	report for default#observatory-build;0.1-SNAPSHOT pom produced in /home/fjbanez/Desktop/cursoSparkOderski/final/observatory/project/target/resolution-cache/reports/default-observatory-build-pom.xml
-[debug] 	report for default#observatory-build;0.1-SNAPSHOT scala-tool produced in /home/fjbanez/Desktop/cursoSparkOderski/final/observatory/project/target/resolution-cache/reports/default-observatory-build-scala-tool.xml
-[debug] 	resolve done (3887ms resolve - 159ms download)
+[debug] :: resolution report :: resolve 3134ms :: artifacts dl 138ms
+[debug] 	report for default#observatory-build;0.1-SNAPSHOT compile produced in C:\Users\Pedro\Downloads\CURSO SCALA ENERO 2017\practicafinal\observatory\project\target\resolution-cache\reports\default-observatory-build-compile.xml
+[debug] 	report for default#observatory-build;0.1-SNAPSHOT runtime produced in C:\Users\Pedro\Downloads\CURSO SCALA ENERO 2017\practicafinal\observatory\project\target\resolution-cache\reports\default-observatory-build-runtime.xml
+[debug] 	report for default#observatory-build;0.1-SNAPSHOT test produced in C:\Users\Pedro\Downloads\CURSO SCALA ENERO 2017\practicafinal\observatory\project\target\resolution-cache\reports\default-observatory-build-test.xml
+[debug] 	report for default#observatory-build;0.1-SNAPSHOT provided produced in C:\Users\Pedro\Downloads\CURSO SCALA ENERO 2017\practicafinal\observatory\project\target\resolution-cache\reports\default-observatory-build-provided.xml
+[debug] 	report for default#observatory-build;0.1-SNAPSHOT optional produced in C:\Users\Pedro\Downloads\CURSO SCALA ENERO 2017\practicafinal\observatory\project\target\resolution-cache\reports\default-observatory-build-optional.xml
+[debug] 	report for default#observatory-build;0.1-SNAPSHOT compile-internal produced in C:\Users\Pedro\Downloads\CURSO SCALA ENERO 2017\practicafinal\observatory\project\target\resolution-cache\reports\default-observatory-build-compile-internal.xml
+[debug] 	report for default#observatory-build;0.1-SNAPSHOT runtime-internal produced in C:\Users\Pedro\Downloads\CURSO SCALA ENERO 2017\practicafinal\observatory\project\target\resolution-cache\reports\default-observatory-build-runtime-internal.xml
+[debug] 	report for default#observatory-build;0.1-SNAPSHOT test-internal produced in C:\Users\Pedro\Downloads\CURSO SCALA ENERO 2017\practicafinal\observatory\project\target\resolution-cache\reports\default-observatory-build-test-internal.xml
+[debug] 	report for default#observatory-build;0.1-SNAPSHOT plugin produced in C:\Users\Pedro\Downloads\CURSO SCALA ENERO 2017\practicafinal\observatory\project\target\resolution-cache\reports\default-observatory-build-plugin.xml
+[debug] 	report for default#observatory-build;0.1-SNAPSHOT sources produced in C:\Users\Pedro\Downloads\CURSO SCALA ENERO 2017\practicafinal\observatory\project\target\resolution-cache\reports\default-observatory-build-sources.xml
+[debug] 	report for default#observatory-build;0.1-SNAPSHOT docs produced in C:\Users\Pedro\Downloads\CURSO SCALA ENERO 2017\practicafinal\observatory\project\target\resolution-cache\reports\default-observatory-build-docs.xml
+[debug] 	report for default#observatory-build;0.1-SNAPSHOT pom produced in C:\Users\Pedro\Downloads\CURSO SCALA ENERO 2017\practicafinal\observatory\project\target\resolution-cache\reports\default-observatory-build-pom.xml
+[debug] 	report for default#observatory-build;0.1-SNAPSHOT scala-tool produced in C:\Users\Pedro\Downloads\CURSO SCALA ENERO 2017\practicafinal\observatory\project\target\resolution-cache\reports\default-observatory-build-scala-tool.xml
+[debug] 	resolve done (3134ms resolve - 138ms download)
 [info] Done updating.

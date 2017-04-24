@@ -24,7 +24,6 @@ class ExtractionTest extends FunSuite with BeforeAndAfterAll{
   override def afterAll(): Unit = {
     assert(initializeExtraction(), " -- did you fill in all the values in Extraction (conf, sc, wikiRdd)?")
     import Extraction._
-    sc.stop()
   }
 
   //def locateTemperatures(year: Int, stationsFile: String, temperaturesFile: String): Iterable[(LocalDate, Location, Double)]

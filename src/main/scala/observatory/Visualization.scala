@@ -7,13 +7,29 @@ import com.sksamuel.scrimage.{Image, Pixel}
   */
 object Visualization {
 
+  def distance(location: Location, location2: Location): Double = 2
+
   /**
     * @param temperatures Known temperatures: pairs containing a location and the temperature at this location
     * @param location Location where to predict the temperature
     * @return The predicted temperature at `location`
+    *
+    *
+    *         sum(wi*zi)/sum(wi)
+    *
     */
   def predictTemperature(temperatures: Iterable[(Location, Double)], location: Location): Double = {
-    ???
+    val factoresarriba = for {
+      tempe <- temperatures
+
+    } yield(tempe._2/Math.pow(distance(location, tempe._1),2))
+
+    val factoresabajo = for {
+      tempe <- temperatures
+
+    } yield(1/Math.pow(distance(location, tempe._1),2))
+
+    return factoresarriba.reduce(_+_)/factoresabajo.reduce(_+_)
   }
 
   /**
