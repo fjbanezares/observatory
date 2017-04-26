@@ -1,0 +1,12 @@
+/usr/share/terminator/terminatorlib/terminator.py:92: Warning: Attempt to add property GnomeProgram::sm-connect after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:92: Warning: Attempt to add property GnomeProgram::show-crash-dialog after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:92: Warning: Attempt to add property GnomeProgram::display after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+/usr/share/terminator/terminatorlib/terminator.py:92: Warning: Attempt to add property GnomeProgram::default-icon after class was initialised
+  self.gnome_program = gnome.init(APP_NAME, APP_VERSION)
+Warning: python-keybinder is not installed. This means the hide_window shortcut will be unavailable
+Unable to bind hide_window key, another instance/window has it.
+PluginRegistry::load_plugins: Importing plugin __init__.py failed: 'module' object has no attribute 'AVAILABLE'
+<Window object at 0x7f8a49d47550 (terminatorlib+window+Window at 0x23fe090)> is not in registered window list

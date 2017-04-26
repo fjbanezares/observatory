@@ -11,9 +11,9 @@ object Test extends App {
   def fsPath(resource: String): String =
     Paths.get(getClass.getResource(resource).toURI).toString
 
-  println(fsPath("/stations.csv"))
+  //println(fsPath("/stations.csv"))
 
-  val is :InputStream = getClass.getResourceAsStream("/stations.csv")
+  val is :InputStream = getClass.getResourceAsStream("/prueba/stations.csv")
 
   val lines: Iterator[String] = scala.io.Source.fromInputStream( is ).getLines()
 
@@ -36,7 +36,7 @@ object Test extends App {
   }
 
 
-  val is2 :InputStream = getClass.getResourceAsStream("/1977.csv")
+  val is2 :InputStream = getClass.getResourceAsStream("/prueba/1977.csv")
   val lines2: Iterator[String] = scala.io.Source.fromInputStream( is2 ).getLines()
   case class Location(lat: Double, lon: Double)
 
