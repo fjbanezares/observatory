@@ -1,4 +1,5 @@
 package observatory
+import scala.math._
 
 import com.sksamuel.scrimage.{Image, Pixel}
 
@@ -7,6 +8,7 @@ import com.sksamuel.scrimage.{Image, Pixel}
   */
 object Interaction {
 
+
   /**
     * @param zoom Zoom level
     * @param x X coordinate
@@ -14,7 +16,11 @@ object Interaction {
     * @return The latitude and longitude of the top-left corner of the tile, as per http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames
     */
   def tileLocation(zoom: Int, x: Int, y: Int): Location = {
-    ???
+
+    val numberTiles = Math.pow(2,zoom)
+    val latitude: Double = toDegrees(atan(sinh(Pi * (1.0 - 2.0 * y.toDouble / (1<<zoom)))))
+    val longitude: Double =  x.toDouble / (1<<zoom) * 360.0 - 180.0
+    Location(latitude,longitude)
   }
 
   /**
@@ -26,6 +32,27 @@ object Interaction {
     * @return A 256×256 image showing the contents of the tile defined by `x`, `y` and `zooms`
     */
   def tile(temperatures: Iterable[(Location, Double)], colors: Iterable[(Double, Color)], zoom: Int, x: Int, y: Int): Image = {
+
+    /** val topLeft = tileLocation(zoom, x, y)
+
+  val bottomRight = tileLocation(zoom, x + 1, y + 1) ¿¿-1-1??
+
+  val deltaLon = (bottomRight.lon - topLeft.lon) / 256
+  val deltaLat = (bottomRight.lat - topLeft.lat) / 256
+
+  Image(
+    256,
+    256,
+    (for (x <- 0 until 256; y <- 0 until 256)
+      yield {
+        val color = Visualization.interpolateColor(
+          colors,
+          Visualization.predictTemperature(
+            temperatures,
+            Location(topLeft.lat + x * deltaLat, topLeft.lon + y * deltaLon)))
+        Pixel(color.red, color.green, color.blue, 127)
+      }).toArray)*/
+
     ???
   }
 

@@ -1,6 +1,10 @@
 package observatory
 
 import com.sksamuel.scrimage.{Image, Pixel}
+import Math.sin
+import Math.acos
+import Math.cos
+import Math.PI
 
 /**
   * 2nd milestone: basic visualization
@@ -18,7 +22,18 @@ object Visualization {
   val black60M: Color = Color(0, 0, 0)
 
 
-  def distance(location: Location, location2: Location): Double = 2
+  def distance(location: Location, location2: Location): Double = {
+    val lat1:Double=location.lat*PI/180
+    val lat2:Double=location2.lat*PI/180
+    val lon1:Double=location.lon*PI/180
+    val lon2:Double=location2.lon*PI/180
+    acos(sin(lat1)*sin(lat2)+cos(lat1)*cos(lat2)*cos(lon2-lon1))*18000/PI
+  }
+//Put it in degrees so distances are not too small in order to avoid great numbers in the prediction algorithm
+  //Plus a factor of 100
+
+
+
 
   /**
     * @param temperatures Known temperatures: pairs containing a location and the temperature at this location
@@ -30,17 +45,20 @@ object Visualization {
     *
     */
   def predictTemperature(temperatures: Iterable[(Location, Double)], location: Location): Double = {
-    val factoresarriba = for {
-      tempe <- temperatures
 
-    } yield (tempe._2 / Math.pow(distance(location, tempe._1), 2))
+     val tempsOrderedbyDistance = temperatures.toList.map(x=>(Math.pow(distance(location,x._1),3),x._2)).sortBy(x=>x._1)
+//Si la distancia incrementada y elevada al cubo es menor que 1 (lo que daría un numero grande de divisor)
+    //Para una distancia tan pequeña devolvemos la temperatura de la estación más cercana
+    if (tempsOrderedbyDistance.head._1<1) tempsOrderedbyDistance.head._2
+    else {
+       val factoresarriba = tempsOrderedbyDistance.foldLeft(0.0)((acc,elemento)=>(acc+elemento._2/elemento._1))
+       val factoresabajo = tempsOrderedbyDistance.foldLeft(0.0)((acc,elemento)=>(acc+1/elemento._1))
 
-    val factoresabajo = for {
-      tempe <- temperatures
+    factoresarriba/factoresabajo
 
-    } yield (1 / Math.pow(distance(location, tempe._1), 2))
+    }
 
-    return factoresarriba.reduce(_ + _) / factoresabajo.reduce(_ + _)
+
   }
 
   /**
@@ -50,25 +68,25 @@ object Visualization {
     */
   def interpolateColor(points: Iterable[(Double, Color)], value: Double): Color = {
     val pointsOrdered: List[(Double, Color)] = points.toList.sortBy(_._1)
-    def loop(points: List[(Double, Color)], lastColor: Color, lastValue: Double): Color = {
+    def loop(pointsLoop: List[(Double, Color)], lastColor: Color, lastValue: Double): Color = {
 
-      if (points == Nil) lastColor
+      if (pointsLoop == Nil) lastColor
 
-      else if (value < points.head._1) {
+      else if (value < pointsLoop.head._1) {
 
-        val rojo: Int = (lastColor.red + (value - lastValue) * (points.head._2.red - lastColor.red) / (points.head._1 - lastValue)).toInt
-        val verde: Int = (lastColor.green + (value - lastValue) * (points.head._2.green - lastColor.green) / (points.head._1 - lastValue)).toInt
-        val azul: Int = (lastColor.blue + (value - lastValue) * (points.head._2.blue - lastColor.blue) / (points.head._1 - lastValue)).toInt
+        val rojo: Int = (lastColor.red + (value - lastValue) * (pointsLoop.head._2.red - lastColor.red) / (pointsLoop.head._1 - lastValue)).round.toInt
+        val verde: Int = (lastColor.green + (value - lastValue) * (pointsLoop.head._2.green - lastColor.green) / (pointsLoop.head._1 - lastValue)).round.toInt
+        val azul: Int = (lastColor.blue + (value - lastValue) * (pointsLoop.head._2.blue - lastColor.blue) / (pointsLoop.head._1 - lastValue)).round.toInt
         Color(rojo, verde, azul)
 
       }
 
-      else loop(points.tail, points.head._2, points.head._1)
+      else loop(pointsLoop.tail, pointsLoop.head._2, pointsLoop.head._1)
 
     }
-    loop(pointsOrdered, pointsOrdered.head._2, pointsOrdered.head._1)
+    if (value < pointsOrdered.head._1) pointsOrdered.head._2
+    else loop(pointsOrdered.tail, pointsOrdered.head._2, pointsOrdered.head._1)
   }
-
   /**
     * @param temperatures Known temperatures
     * @param colors       Color scale
@@ -86,8 +104,8 @@ object Visualization {
 
     for {
 
-      coordenadaY <- 0 until 180
-      coordenadaX <- 0 until 360
+      coordenadaY <- 0 until 180  //de 0 a 179
+      coordenadaX <- 0 until 360 // de 0 a 359
 
     } {
       val posicionArray: Int = coordenadaY * 180 + coordenadaX
