@@ -21,6 +21,9 @@ object Visualization {
   val purple50M: Color = Color(33, 1, 107)
   val black60M: Color = Color(0, 0, 0)
 
+ val ejemploColors: Iterable[(Double, Color)] = List((-60,black60M),(-50,purple50M),(-27,magenta27M),(-15,blue15M),
+   (0,cyan0),(12,yellow12),(32,red32),(60,white60))
+
 
   def distance(location: Location, location2: Location): Double = {
     val lat1:Double=location.lat*PI/180
@@ -68,6 +71,7 @@ object Visualization {
     */
   def interpolateColor(points: Iterable[(Double, Color)], value: Double): Color = {
     val pointsOrdered: List[(Double, Color)] = points.toList.sortBy(_._1)
+
     def loop(pointsLoop: List[(Double, Color)], lastColor: Color, lastValue: Double): Color = {
 
       if (pointsLoop == Nil) lastColor
@@ -108,7 +112,7 @@ object Visualization {
       coordenadaX <- 0 until 360 // de 0 a 359
 
     } {
-      val posicionArray: Int = coordenadaY * 180 + coordenadaX
+      val posicionArray: Int = coordenadaY * 360 + coordenadaX
       val coordenadas: Location = Location(90 - coordenadaY, coordenadaX - 180)
       val prediccion = predictTemperature(temperatures, coordenadas)
       val color: Color = interpolateColor(colors, prediccion)
@@ -116,6 +120,9 @@ object Visualization {
       arrConst(posicionArray) = pix
 
     }
+    println("a dibujar, " + arrConst(180*360-1))
+    println("go")
+
     Image(360, 180, arrConst)
   }
 

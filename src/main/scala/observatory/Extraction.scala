@@ -53,10 +53,10 @@ object  Extraction {
     * @param temperaturesFile Path of the temperatures resource file to use (e.g. "/1975.csv")
     * @return A sequence containing triplets (date, location, temperature)
     *
-    *         TermperaturesFile : (010010,,01,01,7.5) --> 1 de enero, 7.5 grados de media
+    *         TermperaturesFile : (010010,_,01,01,7.5) --> 1 de enero, 7.5 grados de media
     *         De un fichero y las estaciones nos da
     *
-    *         stationsFile: (010860,,+70.600,+029.693)
+    *         stationsFile: (010860,_,+70.600,+029.693)
     *
     *         case class Location(lat: Double, lon: Double)
     *
